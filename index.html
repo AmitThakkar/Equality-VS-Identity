@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Equality VS Identity by AmitThakkar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Equality VS Identity</h1>
+      <h2 class="project-tagline">This blog explain difference between Equality(==) vs Identity(===)</h2>
+      <a href="https://github.com/AmitThakkar/Equality-VS-Identity" class="btn">View on GitHub</a>
+      <a href="https://github.com/AmitThakkar/Equality-VS-Identity/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/AmitThakkar/Equality-VS-Identity/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="equality-vs-identity" class="anchor" href="#equality-vs-identity" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Equality VS Identity</h1>
+
+<p>This blog explain difference between Equality(==) vs Identity(===)</p>
+
+<p>In JavaScript, we have Equality (==) and Identity(===) operators for equality comparison between two values/operands. 
+When first time we see Equality (==) and Identity (===) operators, then following questions arise in our mind. </p>
+
+<ol>
+<li>What is difference between Equality (==) and Identity (===) ? </li>
+<li>Is there a performance benefit with Equality (==) or Identity (===) ? </li>
+</ol>
+
+<p>Answers: </p>
+
+<ol>
+<li>
+<p>What is Difference Between Equality (==) And Identity (===) ? Equality (==) returns true if both value/operands 
+have the same value, without worrying about type of both value/operands. 
+e.g.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c1">2</span> <span class="pl-k">==</span> <span class="pl-c1">1</span> <span class="pl-c">// returns false, both value/operands have different value.</span>
+<span class="pl-c1">2</span> <span class="pl-k">==</span> <span class="pl-c1">2</span> <span class="pl-c">// returns true, both value/operands have same type and value</span>
+<span class="pl-c1">2</span> <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">"</span>2<span class="pl-pds">"</span></span> <span class="pl-c">// returns true, while both value/operands have different type, first value is type of number and second one is type of string, but value is same.</span></pre></div>
+
+<p>Equality (==) first compares types, if types are not same, then first convert both values/operands to same type, 
+then compare both value/operands, while on other hand Identity (===) first compares types, if types are same then 
+it only compares the value of both the operands, otherwise returns false.
+e.g.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c1">2</span> <span class="pl-k">===</span> <span class="pl-c1">1</span> <span class="pl-c">// returns false, both value/operands have different value.</span>
+<span class="pl-c1">2</span> <span class="pl-k">===</span> <span class="pl-c1">2</span> <span class="pl-c">// returns true, both value/operands have same type and value</span>
+<span class="pl-c1">2</span> <span class="pl-k">===</span> <span class="pl-s"><span class="pl-pds">"</span>2<span class="pl-pds">"</span></span> <span class="pl-c">// returns false, both value/operands have same value but different types, first value is type of number and second one is string.</span></pre></div>
+</li>
+<li>
+<p>Is there a performance benefit with Equality (==) or Identity (===) ? 
+Identity (===) does not do type conversion (if types are not same it returns false), So Identity (===) is faster than Equality (==).</p>
+
+<blockquote>
+<p>Identity (===), is generally better and safer, because there is no behind the scenes type conversion.</p>
+</blockquote>
+</li>
+</ol>
+
+<h2>
+<a id="follow-me" class="anchor" href="#follow-me" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Follow Me</h2>
+
+<p><a href="https://github.com/AmitThakkar">Github</a></p>
+
+<p><a href="https://twitter.com/amit_thakkar01">Twitter</a></p>
+
+<p><a href="https://in.linkedin.com/in/amitthakkar01">LinkedIn</a></p>
+
+<p><a href="http://amitthakkar.github.io/">More Blogs By Me</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/AmitThakkar/Equality-VS-Identity">Equality VS Identity</a> is maintained by <a href="https://github.com/AmitThakkar">AmitThakkar</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
